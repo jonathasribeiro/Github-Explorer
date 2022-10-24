@@ -42,7 +42,7 @@ const Repository: React.FC = () => {
       setRepository(response.data);
     });
 
-    api.get(`repos/${params.repository}/issues`).then(response => {
+    api.get(`repos/${params.repository}/isssues`).then(response => {
       setIssues(response.data);
     });
   }, [params.repository]);

@@ -43,10 +43,10 @@ const Dashboard: React.FC = () => {
   ): Promise<void> {
     event.preventDefault();
 
-    if (!newRepo) {
-      setInputError('Digite o autor/nome do repositório');
-      return;
-    }
+    // if (!newRepo) {
+    //   setInputError('Digite o autor/nome do repositório');
+    //   return;
+    // }
 
     try {
       const response = await api.get<Repository>(`repos/${newRepo}`);
@@ -57,7 +57,7 @@ const Dashboard: React.FC = () => {
       setNewRepo('');
       setInputError('');
     } catch (err) {
-      setInputError('Erro na busca desse repositório');
+      // setInputError('Erro na busca desse repositório');
     }
   }
 
